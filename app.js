@@ -37,14 +37,18 @@ window.addEventListener("scroll", fixedNavBarCheck)
 function fixedNavBarCheck() {
     const topLinkBtn = document.querySelector(".top-link")
 
+    const companyName = document.querySelector(".company-name")
+
     const navBarHeight = navBar.getBoundingClientRect().height
 
     const yOffset = window.scrollY
 
     if (yOffset > navBarHeight) {
+        companyName.textContent = "Canine Cyber"
         navBar.classList.add("fixed-nav")
         topLinkBtn.classList.add("show-link")
     } else {
+        companyName.textContent = ""
         navBar.classList.remove("fixed-nav")
         topLinkBtn.classList.remove("show-link")
     }

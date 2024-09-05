@@ -177,6 +177,7 @@ nav {
   background: var(--white);
   box-shadow: var(--light-shadow);
 }
+
 .fixed-nav .links a {
   color: var(--primary-brown);
 }
@@ -191,6 +192,14 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+
+.company-name {
+  align-items: center;
+  color: var(--grey);
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
 .nav-toggle {
   font-size: 1.5rem;
   color: var(--primary-brown);
@@ -244,6 +253,7 @@ nav {
   .nav-header {
     padding: 0;
   }
+
   .nav-toggle {
     display: none;
   }
