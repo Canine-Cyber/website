@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="logo.png" alt="logo" class="logo">
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li>
+                <a href="#tools" class="scroll-link">tools</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>Canine Cyber</h1>
+          <p>Your best friend in the digital world.</p>
+          <a href="#about" class="scroll-link btn btn-white">
+            About Us
+          </a>
+        </div>
+        <footer class="license-info">
+          <small>Background image modified from original by <a href="https://commons.wikimedia.org/wiki/File:German_Shepherd_Dog_in_Lithuanian_Army.jpg">Pliadžys</a> under the <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a>, and released under the same license.</small>
+        </footer>
+      </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="title">
+        <h2>About <span>Us</span></h2>
+      </div>
+      <div class="content">
+        <p>
+          Our mission is to make the internet a safer place for people. We develop intelligent software solutions to help protect you from online threats.
+        </p>
+      </div>
+      <footer class="license-info">
+        <small>
+          Background image from <a href="https://commons.wikimedia.org/wiki/File:Wifi-BIG.jpg">EFF-Graphics</a>, <a href="https://creativecommons.org/licenses/by/3.0/us/deed.en">CC BY 3.0 US</a>, via Wikimedia Commons
+        </small>
+      </footer>
+    </section>
+    <!-- Tools Section -->
+    <section id="tools" class="section">
+      <div class="title">
+        <h2>Featured <span>tools</span></h2>
+      </div>
+      <div class="content">
+        <p>
+          Coming Soon        
+        </p>
+      </div>
+      <footer class="license-info">
+        <small>
+          Background image from <a href="https://commons.wikimedia.org/wiki/File:Laptop_and_a_mug_(Unsplash).jpg">Ryan Riggins ryan_riggins</a>, CC0, via Wikimedia Commons
+        </small>
+      </footer>
+    </section>
+    <!-- footer -->
+    <footer class="section">
+      <p>
+        copyright &copy; Canine Cyber <span id="date">
+          2020
+        </span>. all rights reserved
+      </p>
+    </footer>
+    <!-- Return to Top -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
