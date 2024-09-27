@@ -12,10 +12,15 @@ Variables
 */
 
 :root {
-  --primary-brown: hsl(30, 92%, 24%);
-  --grey: hsl(210, 22%, 49%);
+  --primary: #607d8b;
+  --primary-darkest: #263238; 
+  --primary-darkest-translucent: rgba(38, 50, 56, 0.5);
+  --primary-lightest: #eceff1;
+  --primary-contrast: #fff;
   --white: #fff;
-  --secondary-blue: rgb(4, 75, 253);
+  --secondary: #00bcd4;
+  --secondary-dark: #006064;
+  --secondary-dark-translucent: rgba(0, 96, 100, 0.5);
   --black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
@@ -41,7 +46,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   background: hsl(210, 36%, 96%);
-  color: var(--primary-brown);
+  color: var(--primary-contrast);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -51,7 +56,7 @@ ul {
 a {
   text-decoration: none;
 }
-img:not(.logo) {
+img:not(.logo):not(.growl-logo)  {
   width: 100%;
 }
 img {
@@ -81,8 +86,9 @@ h4 {
   font-size: 0.875rem;
 }
 p {
+  font-size: 1.2rem;
   margin-bottom: 1.25rem;
-  color: var(--grey);
+  color: var(--primary-contrast);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -135,7 +141,7 @@ p {
 }
 .btn:hover {
   background: var(--white);
-  color: var(--secondary-blue);
+  color: var(--secondary);
 }
 /* section */
 .section {
@@ -164,7 +170,7 @@ Scroll
 */
 /* navbar */
 nav {
-  background: var(--white);
+  background: var(--primary);
   padding: 1rem 1.5rem;
   z-index: 100;
 }
@@ -174,15 +180,15 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--white);
+  background: var(--primary);
   box-shadow: var(--light-shadow);
 }
 
 .fixed-nav .links a {
-  color: var(--primary-brown);
+  color: var(--primary-contrast);
 }
 .fixed-nav .links a:hover {
-  color: var(--secondary-blue);
+  color: var(--secondary);
 }
 /* .fixed-nav .links-container {
   height: auto !important;
@@ -195,21 +201,21 @@ nav {
 
 .company-name {
   align-items: center;
-  color: var(--grey);
+  color: var(--primary-contrast);
   font-size: 2rem;
   padding-left: 1rem;
 }
 
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--primary-brown);
+  color: var(--primary-contrast);
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: var(--secondary-blue);
+  color: var(--secondary);
 }
 .logo {
   height: 50px;
@@ -225,8 +231,8 @@ nav {
   height: 200px;
 }
 .links a {
-  background: var(--white);
-  color: var(--primary-brown);
+  background: var(--primary);
+  color: var(--primary-contrast);
   font-size: 1.1rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
@@ -236,7 +242,7 @@ nav {
   padding: 0.75rem 0;
 }
 .links a:hover {
-  color: var(--primary-brown);
+  color: var(--primary);
 }
 @media screen and (min-width: 800px) {
   nav {
@@ -282,7 +288,7 @@ nav {
 /* hero */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(2, 53, 207, 0.395), rgba(246, 244, 244, 0.3)),
+  background: linear-gradient(rgba(38, 50, 56, 0.395), rgba(246, 244, 244, 0.3)),
     url(./k9-dog.png) center/cover no-repeat;
 }
 .banner {
@@ -306,35 +312,99 @@ header {
   justify-self: start;
 }
 
-#services {
-  background: 
-  linear-gradient(rgba(246, 244, 244, 0.7), rgba(63, 100, 212, 0.5)), 
-  url(./glasses-laptop.jpg) center/cover no-repeat;
-}
 
 #tools {
   background: 
-  linear-gradient(rgba(246, 244, 244, 0.9), rgba(63, 100, 212, 0.5)), 
+  /* linear-gradient(var(--primary-darkest-translucent), rgba(246, 244, 244, 0.7)),  */
   url(./Laptop_and_a_mug.jpg) center/cover no-repeat;
+
 
 }
 
 #about {
   background: 
-  linear-gradient(rgba(246, 244, 244, 0.7), rgba(63, 100, 212, 0.5)), 
+  /* linear-gradient(var(--primary-darkest-translucent), rgba(246, 244, 244, 0.7)),
+  linear-gradient(rgba(246, 244, 244, 0.7), var(--primary-darkest-translucent)),   */
   url(./city-wifi.jpg) center/cover no-repeat;
 
 }
 
+.content {
+  margin-top: 4rem;
+}
+
 .content p {
-  color: var(--black);
+  color: var(--primary-contrast);
   max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
 }
 
+
+.content article {
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #546e7a;
+  margin-top: 5%;
+  /* margin-left: 25%;
+  margin-right: 25%; */
+  /* width: 40rem; */
+  /* width: stretch; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: var(--radius);
+}
+
+article h3 {
+  text-transform: lowercase;
+  color: #ff5722;
+}
+
+article h3 span {
+  background-color: #212121;
+  padding-left: 4px;
+  padding-bottom: 4px;
+}
+
+/* article .image-container {
+  margin-left: 0 auto;
+} */
+
+.growl-logo {
+  height: 100px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+article .text {
+  margin-left: 10px;
+  margin-right: 5px;
+  color: black;
+}
+
+.text h3 {
+  margin-bottom: 0.5rem;
+}
+
+
+.title {
+  padding-top: 4rem;
+}
+
 @media screen and (min-width: 768px) {
   .container p {
+    max-width: 40rem;
+  }
+  .container article {
     max-width: 40rem;
   }
 }
@@ -344,7 +414,7 @@ header {
   text-transform: uppercase;
 }
 .title span {
-  color: var(--secondary-blue);
+  color: var(--secondary);
 }
 #about,
 #services,
@@ -386,8 +456,12 @@ footer ol li {
 }
 
 footer {
-  background-color: var(--primary-brown);
+  background-color: var(--primary);
   padding: 0.5rem 1rem;
+}
+
+footer a {
+  color: var(--secondary-dark)
 }
 
 .top-link {
@@ -395,13 +469,13 @@ footer {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--secondary-blue);
+  background: var(--secondary);
   width: 2rem;
   height: 2rem;
   display: grid;
   place-items: center;
   border-radius: var(--radius);
-  color: var(--white);
+  color: var(--secondary-contrast);
   animation: bounce 2s ease-in-out infinite;
 
   visibility: hidden;
