@@ -333,11 +333,13 @@ header {
   margin-top: 4rem;
 }
 
-.content p {
+#about .content p {
   color: var(--primary-contrast);
   max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 
