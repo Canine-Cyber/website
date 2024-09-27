@@ -397,6 +397,11 @@ article .text {
   margin-bottom: 0.5rem;
 }
 
+.text p {
+  margin: 0.5rem 0px;
+  padding: 0px 0px;
+}
+
 
 .title {
   padding-top: 4rem;
